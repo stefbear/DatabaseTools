@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85C6483E-5CA7-435B-A7FC-69EA5BB629F4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Database</AssemblyName>
+    <AssemblyOriginatorKeyFile>SnapIns.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Database</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <Name>MySql.Data</Name>
+      <HintPath>C:\Programme\MySQL\MySQL Connector Net 1.0.4\bin\.NET 1.1\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjectHelper\Attributes.cs" />
+    <Compile Include="BusinessObjectHelper\DBToBO.cs" />
+    <Compile Include="BusinessObjectHelper\MappingInfoCache.cs" />
+    <Compile Include="BusinessObjectHelper\PropertyMappingInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\GenericDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\IDatabaseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\MsSqlProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\MySqlProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\OdbcProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\OleDbProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenericDataSet\OracleProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MySql\DatabaseEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySql\DatabaseEditor.Designer.cs">
+      <DependentUpon>DatabaseEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySql\DatabaseBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySql\MySqlDatabaseManager.cs" />
+    <Compile Include="Odbc\ManageDsn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odbc\OdbcDriver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Odbc\OdbcDsn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Odbc\OdbcManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GenericDataSet\GenericDataSet.resx">
+      <DependentUpon>GenericDataSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySql\DatabaseEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatabaseEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySql\DatabaseBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatabaseBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odbc\ManageDsn.resx">
+      <DependentUpon>ManageDsn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MySql\ClassDiagram1.cd" />
+    <None Include="SnapIns.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataSet_TableView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_readonly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CustomControls\CustomControls\CustomControls.csproj">
+      <Project>{D9BFCFA5-AB91-45CB-A963-D72758881523}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Framework\Framework.csproj">
+      <Project>{2E25A0EC-E09B-47B4-A574-F852887F3A1A}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
